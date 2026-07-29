@@ -1,0 +1,201 @@
+/*
+ * Accordion (therapy) Block
+ * Six therapy-area panels. Each panel header shows a therapy icon + title
+ * and a chevron indicator; the expanded body holds product information.
+ * Styles extracted from https://www.msdconnect.co.uk/hcp-resources
+ */
+
+.accordion-therapy {
+  font-family: var(--body-font-family);
+}
+
+/* --- Accordion item (panel) + divider between panels --- */
+.accordion-therapy .accordion-therapy-item {
+  border-bottom: 1px solid rgb(210 211 212);
+}
+
+/* --- Panel header (summary) --- */
+.accordion-therapy .accordion-therapy-item-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 8px;
+  background-color: #eee;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.2s;
+}
+
+.accordion-therapy .accordion-therapy-item-label::-webkit-details-marker {
+  display: none;
+}
+
+/* icon cell (authored as a <p> wrapping <picture>) */
+.accordion-therapy .accordion-therapy-item-label p {
+  flex: 0 0 auto;
+  margin: 0;
+  line-height: 0;
+}
+
+.accordion-therapy .accordion-therapy-item-label img {
+  width: 39px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* title */
+.accordion-therapy .accordion-therapy-item-label h3 {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--brand-teal);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* chevron indicator on the far right */
+.accordion-therapy .accordion-therapy-item-label::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  border: solid var(--brand-teal);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+  margin-bottom: 4px;
+}
+
+.accordion-therapy .accordion-therapy-item[open] .accordion-therapy-item-label::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* --- Expanded content body --- */
+.accordion-therapy .accordion-therapy-item-body {
+  padding: 16px 8px 32px;
+  background-color: #eee;
+}
+
+/* product cards laid out on the grey band */
+.accordion-therapy .accordion-therapy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.accordion-therapy .accordion-therapy-card {
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.accordion-therapy .accordion-therapy-card > p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-color);
+}
+
+.accordion-therapy .accordion-therapy-card > p:last-child {
+  margin-bottom: 0;
+}
+
+/* product name */
+.accordion-therapy .accordion-therapy-item-body strong {
+  color: var(--brand-teal);
+  font-weight: 700;
+}
+
+/* product brand name (leads the first paragraph of each card) is large */
+.accordion-therapy .accordion-therapy-card > p:first-child > strong,
+.accordion-therapy .accordion-therapy-card > p:first-child > em {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+/* "Prescribing Information" and other inline links: underlined dark-teal */
+.accordion-therapy .accordion-therapy-item-body a:any-link {
+  color: var(--link-hover-color);
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/* --- Call-to-action buttons ("Product information" / "Training and resources") ---
+   The block JS tags resource links with .button (and .secondary for the
+   outlined "Training and resources" variant). Override the global plain-link
+   reset so they render as the source's teal / outlined buttons. */
+.accordion-therapy .accordion-therapy-resource-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+.accordion-therapy .accordion-therapy-item-body a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: var(--brand-teal);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.accordion-therapy .accordion-therapy-item-body a.button:any-link:hover {
+  background-color: var(--brand-teal-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* "Training and resources" = outlined variant */
+.accordion-therapy .accordion-therapy-item-body a.button.secondary:any-link {
+  padding: 8px 16px;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  font-size: 13px;
+}
+
+.accordion-therapy .accordion-therapy-item-body a.button.secondary:any-link:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* --- Desktop --- */
+@media (width >= 900px) {
+  .accordion-therapy .accordion-therapy-item-label {
+    padding: 16px 8px;
+  }
+
+  .accordion-therapy .accordion-therapy-item-label img {
+    width: 45px;
+  }
+
+  .accordion-therapy .accordion-therapy-item-label h3 {
+    font-size: 26px;
+  }
+
+  .accordion-therapy .accordion-therapy-item-label::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .accordion-therapy .accordion-therapy-item-body {
+    padding: 24px 8px 32px;
+  }
+
+  /* product cards in a three-column grid like the source */
+  .accordion-therapy .accordion-therapy-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}

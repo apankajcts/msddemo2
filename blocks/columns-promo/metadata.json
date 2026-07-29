@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-29T12:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.msdconnect.co.uk/",
+    "originPage": "MSD Connect UK homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "promo",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image tile + text card (heading + paragraph + CTA)",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage promotional tile bands",
+      "two-up promo layouts mixing an image hero and a solid colored text/CTA card",
+      "landing pages with side-by-side promotional callouts"
+    ],
+    "notSuitableFor": [
+      "simple text-beside-image informational layouts",
+      "uniform repeating card grids (use cards)",
+      "plain multi-column body copy"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T12:10:00.000Z"
+  }
+}

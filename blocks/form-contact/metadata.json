@@ -1,0 +1,49 @@
+{
+  "variantName": "form-contact",
+  "baseBlock": "form",
+  "version": "1.0.0",
+  "created": "2026-07-29T12:26:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.msdconnect.co.uk/contact-us",
+    "originPage": "MSD Connect UK — Contact Us",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "contact-form",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "table of field rows (Label | Type | Options/Placeholder | Required) rendering a labelled contact form with select, text, email, textarea and submit fields",
+    "buttonCount": 1,
+    "imageCount": 0,
+    "fields": [
+      { "label": "Title", "type": "select", "required": true },
+      { "label": "First Name", "type": "text", "required": true },
+      { "label": "Surname", "type": "text", "required": true },
+      { "label": "Email", "type": "email", "required": true },
+      { "label": "Subject", "type": "select", "required": true },
+      { "label": "Enter your text below:", "type": "textarea", "required": true },
+      { "label": "Submit", "type": "submit" }
+    ]
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "contact / enquiry forms on doc-authored EDS pages",
+      "structured multi-field forms with selects, text inputs and a message textarea",
+      "pages needing a submit form without a native form block"
+    ],
+    "notSuitableFor": [
+      "single free-text feedback boxes (use default content)",
+      "multi-step or conditional forms",
+      "forms requiring CAPTCHA/Turnstile challenge replication (handled server-side, not authored)"
+    ]
+  },
+  "notes": "Authored from scratch: no vanilla 'form' block exists in the local project or the sta-boilerplate Block Collection. Cloudflare Turnstile and the hidden honeypot field from the source are intentionally excluded.",
+  "usage": {
+    "pagesUsing": ["/contact-us"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T12:26:00.000Z"
+  }
+}

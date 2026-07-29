@@ -1,0 +1,71 @@
+/* columns-values -- "Guided by Our Values" two-column text-beside-image band.
+ * Values extracted from source computed styles (msdconnect.co.uk homepage).
+ * The pale-teal band background is provided by the section variant
+ * (main .section.pale-teal in styles.css); this block styles layout + typography.
+ */
+
+.columns-values {
+  color: var(--text-color);
+}
+
+.columns-values h3 {
+  margin: 0 0 30px;
+  font-family: var(--heading-font-family);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 39.9px;
+  color: var(--text-color);
+}
+
+.columns-values p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 24.96px;
+  color: var(--text-color);
+}
+
+/* mobile: stack, image below text */
+.columns-values > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columns-values > div > .columns-values-img-col {
+  order: 1;
+}
+
+.columns-values > div > .columns-values-img-col img {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* desktop: 8/4 columns, vertically centered, image right-aligned */
+@media (width >= 900px) {
+  .columns-values > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* text column ~8/12 */
+  .columns-values > div > div:not(.columns-values-img-col) {
+    flex: 8;
+  }
+
+  /* image column ~4/12 */
+  .columns-values > div > .columns-values-img-col {
+    flex: 4;
+    order: unset;
+    text-align: center;
+  }
+
+  .columns-values > div > .columns-values-img-col img {
+    /* source image was resized to ~73% of its column (267px in a 363px col),
+     * centered within the image column */
+    width: auto;
+    max-width: 74%;
+  }
+}

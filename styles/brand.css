@@ -1,0 +1,22 @@
+:root {
+  --heading-font-family: 'invention-latin', arial, helvetica, sans-serif;
+  --body-font-family: 'invention-latin', arial, helvetica, sans-serif;
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #00857c;
+  --link-hover-color: #005c55;
+  --brand-teal: #00857c;
+  --brand-teal-dark: #005c55;
+  --brand-teal-pale: #e6f2f0;
+  --utility-bar-bg: #f7f7f7;
+  --border-color: #e5e5e5;
+  --section-padding: 40px;
+  --nav-height: 122px;
+  --content-max-width: 928px;
+  --heading-size-xxl: 32px;
+  --heading-size-xl: 32px;
+  --heading-size-l: 20px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

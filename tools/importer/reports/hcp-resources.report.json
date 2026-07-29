@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.msdconnect.co.uk/hcp-resources",
+  "path": "hcp-resources",
+  "timestamp": "2026-07-29T12:52:14.813Z",
+  "title": "Healthcare Professional Resources | MSD Connect UK",
+  "template": "hcp-resources",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "accordion-therapy"
+  ]
+}

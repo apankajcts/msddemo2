@@ -1,0 +1,159 @@
+/*
+ * form-contact block
+ * Visual design migrated from https://www.msdconnect.co.uk/contact-us
+ * (Gravity Forms .gform_wrapper). Values are exact source computed styles.
+ */
+
+.form-contact .form-contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 40px;
+  max-width: 564px; /* source form width ~563.5px */
+}
+
+.form-contact .form-contact-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* labels */
+.form-contact .form-contact-label {
+  margin: 0 0 8px;
+  color: var(--text-color, #000);
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.form-contact .form-contact-required {
+  margin-left: 3.2px;
+  color: #d83434; /* source required asterisk */
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 700;
+}
+
+/* inputs, selects and textarea share the field styling */
+.form-contact .form-contact-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid #949494; /* source field border */
+  border-radius: 1px;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #000);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.form-contact .form-contact-input::placeholder {
+  color: #767676;
+}
+
+/* focus: teal border, no thick outline (matches source) */
+.form-contact .form-contact-input:focus {
+  border-color: var(--brand-teal, #00857c);
+  outline: none;
+}
+
+/* select: custom teal caret, no native chrome */
+.form-contact select.form-contact-input {
+  height: 62px;
+  padding-right: 40px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg" fill="%2300857C"><path d="M7.767 6.296L1.407 0 0 1.421l7.781 7.704 7.633-7.71L13.993.006z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) 50%;
+  background-size: 16px;
+}
+
+/* textarea: 6 rows ~= 192px in source */
+.form-contact textarea.form-contact-input {
+  height: 192px;
+  resize: vertical;
+}
+
+/* disclaimer / help text below a field */
+.form-contact .form-contact-help {
+  margin: 8px 0 0;
+  color: var(--text-color, #000);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57; /* source 21.98px / 14px */
+}
+
+/* submit button (overrides global button.button) */
+.form-contact .form-contact-field-submit {
+  align-items: flex-start;
+  margin-top: 32px;
+}
+
+.form-contact button.form-contact-submit {
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 10px 35px; /* source 10.08px 35.2px */
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--brand-teal, #00857c);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.form-contact button.form-contact-submit:hover,
+.form-contact button.form-contact-submit:focus-visible {
+  background-color: var(--brand-teal-dark, #005c55);
+  color: #fff;
+}
+
+/* multi-column layout on larger viewports (matches source grid) */
+@media (width >= 900px) {
+  .form-contact .form-contact-form {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 40px;
+  }
+
+  /* Row 1: Title (narrow) + First Name + Surname */
+  .form-contact .form-contact-field-select:first-child {
+    grid-column: span 3;
+  }
+
+  .form-contact .form-contact-field-text {
+    grid-column: span 4;
+  }
+
+  .form-contact .form-contact-field-text + .form-contact-field-text {
+    grid-column: span 5;
+  }
+
+  /* Row 2: Email + Subject */
+  .form-contact .form-contact-field-email {
+    grid-column: span 6;
+  }
+
+  .form-contact .form-contact-field-select:not(:first-child) {
+    grid-column: span 6;
+  }
+
+  /* Row 3+: textarea and submit span full width */
+  .form-contact .form-contact-field-textarea,
+  .form-contact .form-contact-field-submit {
+    grid-column: 1 / -1;
+  }
+
+  /* selects size to their column, not intrinsic content width */
+  .form-contact select.form-contact-input {
+    width: 100%;
+  }
+}

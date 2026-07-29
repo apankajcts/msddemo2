@@ -1,0 +1,77 @@
+/* Block: hero-banner
+ * Full-width teal banner with photographic background + dark overlay and a
+ * white heading positioned top-left. Values extracted from source computed
+ * styles: msdconnect.co.uk/hcp-resources (section.mhh-mcn-v1-hero). */
+
+/* Full-width: override the section max-width wrapper */
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--brand-teal);
+  background-image: url("https://www.msdconnect.co.uk/wp-content/uploads/sites/53/2023/10/msdc-banner-image-overlay.png?w=1020&quality=80&lossy=1");
+  background-position: 0% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay (source ::after -- rgb(0,0,0) @ 0.2) */
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 20%);
+  pointer-events: none;
+}
+
+/* Rows / content cell sit above the overlay */
+.hero-banner > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-banner > div > div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-banner h1 {
+  margin: 0;
+  padding: 10px;
+  color: var(--background-color);
+  font-family: var(--heading-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Tablet and up */
+@media (width >= 600px) {
+  .hero-banner {
+    min-height: 211px;
+  }
+
+  .hero-banner h1 {
+    padding: 20px;
+    font-size: 28px;
+  }
+}
+
+/* Desktop */
+@media (width >= 900px) {
+  .hero-banner h1 {
+    font-size: 46px;
+  }
+}

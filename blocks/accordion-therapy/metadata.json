@@ -1,0 +1,39 @@
+{
+  "variantName": "accordion-therapy",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-07-29T12:20:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.msdconnect.co.uk/hcp-resources",
+    "originPage": "MSD Connect UK — Healthcare Professional Resources",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "faq",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "collapsible panels: title (therapy area, optionally with leading icon) + content (product grid of default content)",
+    "buttonCount": 0,
+    "imageCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "therapy-area / category browsers with expandable panels",
+      "FAQ-style expand/collapse sections",
+      "grouping product or resource listings under collapsible headings"
+    ],
+    "notSuitableFor": [
+      "content that should always be visible without interaction",
+      "tabbed switchable content (use tabs)",
+      "uniform repeating card grids (use cards)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/hcp-resources"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T12:20:00.000Z"
+  }
+}

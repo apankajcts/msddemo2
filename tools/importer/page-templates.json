@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.msdconnect.co.uk/"
+      ],
+      "representativeUrl": "https://www.msdconnect.co.uk/",
+      "coverageGaps": [],
+      "description": "MSD Connect UK homepage with hero, resource/about promo articles, values section and figure",
+      "blocks": [
+        {
+          "name": "columns-promo",
+          "instances": [
+            ".mhh-mcn-v1-columns--9b8b696fbefb89785698d8442c3ce7d4",
+            ".mhh-mcn-v1-columns--2b071bc3bac2805952cb91eb1596182b"
+          ]
+        },
+        {
+          "name": "columns-values",
+          "instances": [
+            ".mhh-mcn-v1-columns--9b0cd5d9f091b59d976b708c61980428"
+          ]
+        },
+        {
+          "name": "section-values",
+          "instances": [
+            ".mhh-mcn-v1-columns--9b0cd5d9f091b59d976b708c61980428"
+          ],
+          "section": "pale-teal"
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc3",
+          "name": "Main Content",
+          "selector": "#mhh_mcn_content",
+          "style": null,
+          "blocks": [
+            "columns-promo",
+            "columns-values"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc4",
+          "name": "Job Number",
+          "selector": "body > div.site-footer-job-number.site-footer-job-number--above-footer",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "body > div.site-footer-job-number.site-footer-job-number--above-footer"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hcp-resources",
+      "urls": [
+        "https://www.msdconnect.co.uk/hcp-resources"
+      ],
+      "representativeUrl": "https://www.msdconnect.co.uk/hcp-resources",
+      "coverageGaps": [],
+      "description": "Healthcare Professional Resources page with breadcrumbs, intro, and therapy-area accordion",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#mhh_mcn_main section.mhh-mcn-v1-hero",
+            ".mhh-mcn-v1-hero"
+          ]
+        },
+        {
+          "name": "accordion-therapy",
+          "instances": [
+            "#mhh_mcn_main .mhh-mcn-v1-accordion",
+            ".mhh-mcn-v1-accordion"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc4",
+          "name": "Main Content",
+          "selector": "#mhh_mcn_content",
+          "style": null,
+          "blocks": [
+            "hero-banner",
+            "accordion-therapy"
+          ],
+          "defaultContent": [
+            "#mhh_mcn_main p.mhh-mcn-v1-paragraph--8c5a5356ee9bdf2b563ddc4b9b1a4c27"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contact-us",
+      "urls": [
+        "https://www.msdconnect.co.uk/contact-us"
+      ],
+      "representativeUrl": "https://www.msdconnect.co.uk/contact-us",
+      "coverageGaps": [],
+      "description": "Contact Us page with breadcrumbs, intro, and contact form with side content columns",
+      "blocks": [
+        {
+          "name": "form-contact",
+          "instances": [
+            "#mhh_mcn_main .gform_wrapper",
+            "#gform_wrapper_22",
+            ".gform_wrapper"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#mhh_mcn_main section.mhh-mcn-v1-hero",
+            ".mhh-mcn-v1-hero"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc4",
+          "name": "Main Content",
+          "selector": "#mhh_mcn_content",
+          "style": null,
+          "blocks": [
+            "form-contact",
+            "hero-banner"
+          ],
+          "defaultContent": [
+            "#mhh_mcn_main > h1",
+            "#mhh_mcn_main > p.mhh-mcn-v1-paragraph--eda8279a005678b631514239ba44d5cc"
+          ]
+        }
+      ]
+    }
+  ]
+}

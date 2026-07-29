@@ -1,0 +1,108 @@
+/* Block: columns-promo -- CSS values extracted from source computed styles.
+   Source: two-column promo band. Cell 1 = image-hero tile with a teal caption
+   box pinned bottom-left (white heading). Cell 2 = solid teal card (white
+   heading + paragraph + white CTA button). Desktop column ratio 8/4. */
+
+.columns-promo {
+  margin: 0;
+}
+
+/* Row: stacked on mobile, side-by-side 8/4 on desktop */
+.columns-promo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Both cells: solid teal tile, content pinned to the bottom-left */
+.columns-promo > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+  padding: 20px;
+  background-color: var(--brand-teal);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Cell 1 (image-hero tile): heading sits in a teal caption box hugging the
+   text at the bottom-left. The source uses a full-bleed photo behind it;
+   no image is available in the authored content, so the teal tile stands in. */
+.columns-promo > div > div:first-child {
+  align-items: flex-start;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.columns-promo > div > div:first-child h1 {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--brand-teal);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41.6px;
+}
+
+.columns-promo > div > div:first-child h1 a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Cell 2 (teal card) headings */
+.columns-promo > div > div h2 {
+  margin: 0 0 26.56px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43.84px;
+}
+
+/* Card paragraph */
+.columns-promo > div > div p {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24.96px;
+}
+
+/* CTA: white rounded button with teal text */
+.columns-promo > div > div p:last-child {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-promo > div > div p a:any-link {
+  display: inline-block;
+  padding: 9.6px 35.2px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--brand-teal);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.columns-promo > div > div p a:any-link:hover {
+  background-color: #fff;
+  color: var(--brand-teal-dark);
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .columns-promo > div {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  /* 8/4 unequal columns */
+  .columns-promo > div > div:first-child {
+    flex: 8;
+  }
+
+  .columns-promo > div > div:last-child {
+    flex: 4;
+  }
+}

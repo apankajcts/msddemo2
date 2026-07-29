@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.msdconnect.co.uk/",
+  "path": "index",
+  "timestamp": "2026-07-29T12:55:00.132Z",
+  "title": "MSD Connect - United Kingdom",
+  "template": "homepage",
+  "blocks": [
+    "columns-promo",
+    "columns-promo",
+    "columns-values"
+  ]
+}

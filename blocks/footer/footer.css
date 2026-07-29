@@ -1,20 +1,104 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  border-top: 1px solid var(--border-color, #e5e5e5);
 }
 
-footer .footer > div {
-  margin: auto;
+/* footer content grid: left column (nav + legal + AE), right column (logos) */
+footer .footer {
   max-width: 1200px;
+  margin: 0 auto;
   padding: 40px 24px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-footer .footer p {
+footer .footer p { margin: 0; }
+
+footer .footer a:any-link {
+  color: var(--brand-teal-dark, #005c55);
+  text-decoration: none;
+}
+
+footer .footer a:hover { text-decoration: underline; }
+
+/* ---- Footer nav links ---- */
+footer .footer .footer-nav ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
 }
 
+footer .footer .footer-nav a {
+  color: var(--brand-teal-dark, #005c55);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ---- Brand logos ---- */
+footer .footer .footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+footer .footer .footer-logos img {
+  display: block;
+  height: auto;
+}
+
+footer .footer .footer-logos p:first-child img { width: 165px; }
+footer .footer .footer-logos p:nth-child(2) img { width: 124px; }
+
+/* ---- Legal / copyright text ---- */
+footer .footer .footer-legal p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* ---- Adverse events reporting box ---- */
+footer .footer .footer-ae {
+  border: 1px solid #000;
+  padding: 24px;
+}
+
+footer .footer .footer-ae p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ---- Desktop two-column layout: content left, logos right ---- */
 @media (width >= 900px) {
-  footer .footer > div {
+  footer .footer {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'nav logos'
+      'legal logos'
+      'ae ae';
     padding: 40px 32px 24px;
+    column-gap: 48px;
+  }
+
+  footer .footer .footer-nav { grid-area: nav; }
+
+  footer .footer .footer-logos {
+    grid-area: logos;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  footer .footer .footer-legal { grid-area: legal; }
+
+  footer .footer .footer-ae {
+    grid-area: ae;
+    max-width: 560px;
   }
 }

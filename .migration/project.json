@@ -1,0 +1,10 @@
+{
+  "type": "doc",
+  "sites": {
+    "msddemo2": {
+      "previewOrg": "apankajcts",
+      "previewSite": "msddemo2",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
