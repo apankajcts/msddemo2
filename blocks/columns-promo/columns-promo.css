@@ -25,16 +25,33 @@
   overflow: hidden;
 }
 
-/* Cell 1 (image-hero tile): heading sits in a teal caption box hugging the
-   text at the bottom-left. The source uses a full-bleed photo behind it;
-   no image is available in the authored content, so the teal tile stands in. */
-.columns-promo > div > div:first-child {
+/* Image-hero tile: full-bleed photo behind an overlaid heading. The heading
+   sits in a teal caption box hugging the bottom-left corner. */
+.columns-promo > div > div.columns-promo-hero {
+  position: relative;
   align-items: flex-start;
   padding: 0;
   justify-content: flex-end;
+  background-color: var(--brand-teal);
 }
 
-.columns-promo > div > div:first-child h1 {
+.columns-promo > div > div.columns-promo-hero picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.columns-promo > div > div.columns-promo-hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 53% 23%;
+}
+
+.columns-promo > div > div.columns-promo-hero h1,
+.columns-promo > div > div.columns-promo-hero h2 {
+  position: relative;
+  z-index: 1;
   margin: 0;
   padding: 20px;
   background-color: var(--brand-teal);
@@ -44,12 +61,14 @@
   line-height: 41.6px;
 }
 
-.columns-promo > div > div:first-child h1 a:any-link {
+.columns-promo > div > div.columns-promo-hero h1 a:any-link,
+.columns-promo > div > div.columns-promo-hero h2 a:any-link {
   color: #fff;
   text-decoration: none;
 }
 
 /* Cell 2 (teal card) headings */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns-promo > div > div h2 {
   margin: 0 0 26.56px;
   color: #fff;
@@ -72,8 +91,10 @@
   margin: 0;
 }
 
+/* CTA button: only direct anchor children of a card paragraph (not links
+   nested inside a heading, e.g. the image-hero caption link). */
 /* stylelint-disable-next-line no-descending-specificity */
-.columns-promo > div > div p a:any-link {
+.columns-promo > div > div p > a:any-link {
   display: inline-block;
   padding: 9.6px 35.2px;
   border-radius: 4px;
@@ -84,7 +105,7 @@
   text-decoration: none;
 }
 
-.columns-promo > div > div p a:any-link:hover {
+.columns-promo > div > div p > a:any-link:hover {
   background-color: #fff;
   color: var(--brand-teal-dark);
   text-decoration: none;
