@@ -57,6 +57,27 @@
   text-align: left;
 }
 
+/* Authored-image variant (contact-us side banner): show the real image,
+   drop the CSS background photo and the dark overlay. */
+.hero-banner.has-image {
+  min-height: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  background-image: none;
+  background-color: transparent;
+}
+
+.hero-banner.has-image::after {
+  content: none;
+}
+
+.hero-banner.has-image picture,
+.hero-banner.has-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Tablet and up */
 @media (width >= 600px) {
   .hero-banner {
