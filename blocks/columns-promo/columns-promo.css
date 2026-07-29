@@ -45,7 +45,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 53% 23%;
+  object-position: center 30%;
 }
 
 .columns-promo > div > div.columns-promo-hero h1,
@@ -118,12 +118,14 @@
     gap: 0;
   }
 
-  /* 8/4 unequal columns */
-  .columns-promo > div > div:first-child {
-    flex: 8;
+  /* 8/4 unequal columns: the image-hero tile is always the wide (8) column;
+     the solid teal text card is always the narrow (4) column. This holds for
+     both bands even though band 2 mirrors the media order (hero on the right). */
+  .columns-promo > div > div {
+    flex: 4;
   }
 
-  .columns-promo > div > div:last-child {
-    flex: 4;
+  .columns-promo > div > div.columns-promo-hero {
+    flex: 8;
   }
 }
