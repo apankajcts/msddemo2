@@ -360,3 +360,39 @@ main .section.dark {
   margin: 0;
   padding: 40px 0;
 }
+
+/* contact-us: form beside the banner image on desktop (heading + job code
+   stay full-width). A section that contains both the contact form and the
+   hero-banner becomes a 2-col grid; the form takes the left column and the
+   banner the right, while default content spans both rows. */
+@media (width >= 900px) {
+  main .section.form-contact-container.hero-banner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 32px;
+  }
+
+  main .section.form-contact-container.hero-banner-container > div {
+    max-width: none;
+    padding: 0;
+  }
+
+  main .section.form-contact-container.hero-banner-container > .default-content-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  main .section.form-contact-container.hero-banner-container > .form-contact-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  main .section.form-contact-container.hero-banner-container > .hero-banner-wrapper {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+  }
+}
