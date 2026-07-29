@@ -3,14 +3,17 @@
    box pinned bottom-left (white heading). Cell 2 = solid teal card (white
    heading + paragraph + white CTA button). Desktop column ratio 8/4. */
 
+/* 20px gutter below each promo band (matches the source spacing between bands).
+   The band directly before the pale-teal values section keeps its gap too. */
 .columns-promo {
-  margin: 0;
+  margin: 0 0 20px;
 }
 
-/* Row: stacked on mobile, side-by-side 8/4 on desktop */
+/* Row: stacked on mobile (20px gap), side-by-side 8/4 on desktop (20px gutter) */
 .columns-promo > div {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 /* Both cells: solid teal tile, content pinned to the bottom-left */
@@ -115,7 +118,7 @@
   .columns-promo > div {
     flex-direction: row;
     align-items: stretch;
-    gap: 0;
+    gap: 20px;
   }
 
   /* 8/4 unequal columns: the image-hero tile is always the wide (8) column;
