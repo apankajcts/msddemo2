@@ -56,6 +56,14 @@ header nav .nav-tools ul {
 /* first utility item (AE reporting) pushed left, remaining pushed right */
 header nav .nav-tools li:first-child { margin-right: auto; }
 
+/* "/" separator between Login and Register (source shows "Login / Register") */
+header nav .nav-tools li:last-child::before {
+  content: '/';
+  margin-right: 8px;
+  color: #005c55;
+  font-size: 13px;
+}
+
 header nav .nav-tools a {
   color: #005c55;
   font-size: 13px;
@@ -100,47 +108,6 @@ header nav .nav-menu-toggle {
 }
 
 header nav .nav-menu-toggle:hover { background-color: #006c64; }
-
-header nav .nav-menu-toggle-icon,
-header nav .nav-menu-toggle-icon::before,
-header nav .nav-menu-toggle-icon::after {
-  box-sizing: border-box;
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: currentcolor;
-  position: relative;
-}
-
-header nav .nav-menu-toggle-icon::before,
-header nav .nav-menu-toggle-icon::after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-header nav .nav-menu-toggle-icon::before { top: -6px; }
-header nav .nav-menu-toggle-icon::after { top: 6px; }
-
-/* toggle -> X when open */
-header nav[aria-expanded='true'] .nav-menu-toggle-icon {
-  background-color: transparent;
-}
-
-header nav[aria-expanded='true'] .nav-menu-toggle-icon::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-header nav[aria-expanded='true'] .nav-menu-toggle-icon::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-header nav[aria-expanded='true'] .nav-menu-toggle {
-  background-color: #efefef;
-  color: #00857c;
-}
 
 /* label text: MENU by default, CLOSE when open (hide authored text, use ::after) */
 header nav .nav-menu-toggle-label {

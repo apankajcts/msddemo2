@@ -73,7 +73,7 @@ export default async function decorate(block) {
   toggle.setAttribute('aria-controls', 'nav');
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-label', 'Open navigation');
-  toggle.innerHTML = '<span class="nav-menu-toggle-icon"></span><span class="nav-menu-toggle-label"></span>';
+  toggle.innerHTML = '<span class="nav-menu-toggle-label"></span>';
   toggle.addEventListener('click', () => toggleMenu(nav));
 
   const navSections = nav.querySelector('.nav-sections');
