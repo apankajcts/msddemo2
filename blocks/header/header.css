@@ -176,6 +176,12 @@ header nav .nav-sections a[aria-current='page'] {
   color: #00857c;
 }
 
+/* AE reporting notice (first utility item) matches the source: 14px / 1.57 */
+header nav .nav-tools li:first-child a {
+  font-size: 14px;
+  line-height: 1.57;
+}
+
 /* ---- Mobile tuning (< 600px): tighter container inset so the utility links
    and MENU button do not overflow narrow viewports ---- */
 @media (width < 600px) {
