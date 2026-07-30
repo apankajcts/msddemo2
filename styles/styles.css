@@ -354,6 +354,13 @@ main .section.dark {
   padding: 40px 0;
 }
 
+/* contact-us "Contact Us" heading: bold 46px to match the source */
+main .section.form-contact-container.hero-banner-container .default-content-wrapper h1 {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 /* contact-us: form beside the banner image on desktop (heading + job code
    stay full-width). A section that contains both the contact form and the
    hero-banner becomes a 2-col grid; the form takes the left column and the
@@ -377,12 +384,12 @@ main .section.dark {
     grid-column: 1 / -1;
   }
 
-  /* form + image sit in a light-grey band (matches source rgb(247,247,247));
-     each cell carries the grey so the 20px gutter between them is grey too */
+  /* form + image sit in one continuous light-grey band (matches source
+     rgb(247,247,247)); the image butts directly against the form (no gap) */
   main .section.form-contact-container.hero-banner-container > .form-contact-wrapper {
     grid-column: 1;
     grid-row: 2;
-    padding: 40px 10px 40px 24px;
+    padding: 40px 24px;
     background-color: var(--light-color);
   }
 
@@ -390,7 +397,7 @@ main .section.dark {
     grid-column: 2;
     grid-row: 2;
     position: relative;
-    padding: 40px 24px 40px 10px;
+    padding: 0;
     background-color: var(--light-color);
   }
 
@@ -398,7 +405,7 @@ main .section.dark {
      adding its own intrinsic height (so it ends level with the form, not below) */
   main .section.form-contact-container.hero-banner-container .hero-banner.has-image {
     position: absolute;
-    inset: 40px 24px 40px 10px;
+    inset: 0;
     display: block;
     max-width: none;
     overflow: hidden;
