@@ -1,0 +1,37 @@
+/* Breadcrumb: Home › Current page, black 14px, above the page heading */
+.breadcrumb nav {
+  margin: 0;
+}
+
+.breadcrumb .breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb .breadcrumb-item {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.breadcrumb .breadcrumb-item a:any-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-separator {
+  color: #00857c;
+  font-size: 14px;
+  line-height: 1;
+}
