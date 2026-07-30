@@ -333,6 +333,13 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+/* default-content body paragraphs match the source's 16px body copy
+   (e.g. the hcp-resources intro line and job-code lines) */
+main .default-content-wrapper > p {
+  font-size: 16px;
+  line-height: 1.56;
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {

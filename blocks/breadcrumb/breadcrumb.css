@@ -1,4 +1,9 @@
-/* Breadcrumb: Home › Current page, black 14px, above the page heading */
+/* Breadcrumb: Home › Current page, black 14px, above the page heading.
+   32px of space above it (below the header) matches the source. */
+.breadcrumb {
+  margin-top: 32px;
+}
+
 .breadcrumb nav {
   margin: 0;
 }
