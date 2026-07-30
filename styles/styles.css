@@ -348,10 +348,16 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+/* pale-teal band: the background is confined to the content column (as in the
+   source), so it sits on the width-constrained inner wrapper, not the full-bleed
+   section. */
 main .section.pale-teal {
-  background-color: var(--brand-teal-pale);
   margin: 0;
-  padding: 48px 0;
+}
+
+main .section.pale-teal > div {
+  background-color: var(--brand-teal-pale);
+  padding: 48px;
 }
 
 main .section.dark {
