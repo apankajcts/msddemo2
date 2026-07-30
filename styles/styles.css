@@ -398,7 +398,7 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
     column-gap: 0;
     align-items: stretch;
     width: min(100% - 48px, var(--content-max-width));
-    margin: 40px auto;
+    margin: 0 auto 40px;
   }
 
   main .section.form-contact-container.hero-banner-container > div {
