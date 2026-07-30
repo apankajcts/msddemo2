@@ -389,22 +389,29 @@ main .section.dark {
   main .section.form-contact-container.hero-banner-container > .hero-banner-wrapper {
     grid-column: 2;
     grid-row: 2;
+    position: relative;
     padding: 40px 24px 40px 10px;
     background-color: var(--light-color);
   }
 
-  /* image fills its column so its height matches the form (equal-height band) */
+  /* the form column defines the row height; the image fills that height without
+     adding its own intrinsic height (so it ends level with the form, not below) */
   main .section.form-contact-container.hero-banner-container .hero-banner.has-image {
+    position: absolute;
+    inset: 40px 24px 40px 10px;
+    display: block;
     max-width: none;
-    height: 100%;
+    overflow: hidden;
   }
 
   main .section.form-contact-container.hero-banner-container .hero-banner.has-image picture {
     display: block;
+    width: 100%;
     height: 100%;
   }
 
   main .section.form-contact-container.hero-banner-container .hero-banner.has-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
