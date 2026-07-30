@@ -415,12 +415,13 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
     grid-row: 1;
   }
 
-  main .section.form-contact-container.hero-banner-container > .default-content-wrapper:first-of-type {
+  main .section.form-contact-container.hero-banner-container > .breadcrumb-wrapper + .default-content-wrapper {
     grid-column: 1 / -1;
     grid-row: 2;
+    margin-bottom: 24px;
   }
 
-  main .section.form-contact-container.hero-banner-container > .default-content-wrapper:last-of-type {
+  main .section.form-contact-container.hero-banner-container > .default-content-wrapper:last-child {
     grid-column: 1 / -1;
     grid-row: 4;
   }
