@@ -325,19 +325,12 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+  width: min(100% - 48px, var(--content-max-width));
+  margin-inline: auto;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
 }
 
 /* section metadata */
@@ -371,9 +364,8 @@ main .section.dark {
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
     align-items: start;
-    max-width: 1200px;
+    width: min(100% - 48px, var(--content-max-width));
     margin: 40px auto;
-    padding: 0 32px;
   }
 
   main .section.form-contact-container.hero-banner-container > div {
