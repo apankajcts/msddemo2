@@ -8,9 +8,9 @@ footer {
 /* footer content grid: left column (nav + legal + AE), right column (logos) */
 footer .footer {
   box-sizing: border-box;
-  width: 100%;
+  width: min(100% - 48px, var(--content-max-width));
   margin: 0 auto;
-  padding: 40px 24px 24px;
+  padding: 40px 0 24px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -84,7 +84,7 @@ footer .footer .footer-ae p {
       'nav logos'
       'legal logos'
       'ae ae';
-    padding: 40px 24px 24px;
+    padding: 40px 0 24px;
     column-gap: 48px;
   }
 
