@@ -385,10 +385,14 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
   }
 
   /* form + image sit in one continuous light-grey band (matches source
-     rgb(247,247,247)); the image butts directly against the form (no gap) */
+     rgb(247,247,247)); both cells fill their grid column and share the grey so
+     they meet at the column boundary with no white gap between them */
   main .section.form-contact-container.hero-banner-container > .form-contact-wrapper {
     grid-column: 1;
     grid-row: 2;
+    justify-self: stretch;
+    width: 100%;
+    box-sizing: border-box;
     padding: 40px 24px;
     background-color: var(--light-color);
   }
@@ -397,6 +401,9 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
     grid-column: 2;
     grid-row: 2;
     position: relative;
+    justify-self: stretch;
+    width: 100%;
+    box-sizing: border-box;
     padding: 0;
     background-color: var(--light-color);
   }
