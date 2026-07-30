@@ -356,6 +356,7 @@ main .section.pale-teal {
 }
 
 main .section.pale-teal > div {
+  box-sizing: border-box;
   background-color: var(--brand-teal-pale);
   padding: 48px;
 }
