@@ -380,8 +380,23 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
     padding: 0;
   }
 
-  main .section.form-contact-container.hero-banner-container > .default-content-wrapper {
+  /* Explicit row order so the breadcrumb (row 1) and the intro heading (row 2)
+     sit above the form/image band (row 3), with the job-code line (row 4) below.
+     Without this, the auto-placed heading would flow after the explicitly-placed
+     form and drop below it. */
+  main .section.form-contact-container.hero-banner-container > .breadcrumb-wrapper {
     grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  main .section.form-contact-container.hero-banner-container > .default-content-wrapper:first-of-type {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  main .section.form-contact-container.hero-banner-container > .default-content-wrapper:last-of-type {
+    grid-column: 1 / -1;
+    grid-row: 4;
   }
 
   /* form + image sit in one continuous light-grey band (matches source
@@ -389,7 +404,7 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
      they meet at the column boundary with no white gap between them */
   main .section.form-contact-container.hero-banner-container > .form-contact-wrapper {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
     justify-self: stretch;
     width: 100%;
     box-sizing: border-box;
@@ -399,7 +414,7 @@ main .section.form-contact-container.hero-banner-container .default-content-wrap
 
   main .section.form-contact-container.hero-banner-container > .hero-banner-wrapper {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     position: relative;
     justify-self: stretch;
     width: 100%;
