@@ -100,9 +100,9 @@ header nav .nav-menu-toggle {
   border: 0;
   border-radius: 2px;
   font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.26px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -117,7 +117,7 @@ header nav .nav-menu-toggle-label {
 
 header nav .nav-menu-toggle-label::after {
   content: 'Menu';
-  font-size: 14px;
+  font-size: 13px;
 }
 
 header nav[aria-expanded='true'] .nav-menu-toggle-label::after { content: 'Close'; }
