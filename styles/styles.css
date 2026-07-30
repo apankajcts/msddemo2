@@ -333,6 +333,11 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+/* Homepage: the first hero band sits 48px below the header separator (source). */
+main > .section.columns-promo-container:first-of-type {
+  margin-top: 48px;
+}
+
 /* default-content body paragraphs match the source's 16px body copy
    (e.g. the hcp-resources intro line and job-code lines) */
 main .default-content-wrapper > p {
