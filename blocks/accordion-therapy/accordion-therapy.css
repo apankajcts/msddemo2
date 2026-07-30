@@ -78,6 +78,12 @@
   background-color: #eee;
 }
 
+/* Alternating row backgrounds (source: odd #eee, even #dadada) */
+.accordion-therapy .accordion-therapy-item:nth-child(even) .accordion-therapy-item-label,
+.accordion-therapy .accordion-therapy-item:nth-child(even) .accordion-therapy-item-body {
+  background-color: #dadada;
+}
+
 /* product cards laid out on the grey band */
 .accordion-therapy .accordion-therapy-grid {
   display: grid;
