@@ -5,12 +5,17 @@ footer {
   border-top: 1px solid var(--border-color, #e5e5e5);
 }
 
-/* footer content grid: left column (nav + legal + AE), right column (logos) */
+/* footer content grid: left column (nav + legal + AE), right column (logos).
+   The block wraps its sections in a single intermediate div, so the grid is
+   applied to that wrapper (footer .footer > div), whose children are the sections. */
 footer .footer {
   box-sizing: border-box;
   width: min(100% - 48px, var(--content-max-width));
   margin: 0 auto;
   padding: 40px 0 24px;
+}
+
+footer .footer > div {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -50,7 +55,7 @@ footer .footer .footer-logos {
 }
 
 footer .footer .footer-logos img {
-  display: block;
+  display: inline-block;
   height: auto;
 }
 
@@ -76,30 +81,47 @@ footer .footer .footer-ae p {
   line-height: 1.5;
 }
 
-/* ---- Desktop two-column layout: content left, logos right ---- */
+/* ---- Desktop layout: an explicit 2-col x 3-row grid.
+   Column 1 holds nav (row 1), legal (row 2), AE box (row 3, full width).
+   Column 2 holds the logos, top-aligned with the nav row. ---- */
 @media (width >= 900px) {
-  footer .footer {
+  footer .footer > div {
     grid-template-columns: 1fr auto;
-    grid-template-areas:
-      'nav logos'
-      'legal logos'
-      'ae ae';
-    padding: 40px 0 24px;
-    column-gap: 48px;
+    grid-template-rows: auto auto auto;
+    gap: 24px 48px;
+    align-items: start;
   }
 
-  footer .footer .footer-nav { grid-area: nav; }
-
-  footer .footer .footer-logos {
-    grid-area: logos;
-    flex-direction: column;
-    align-items: flex-end;
+  footer .footer .footer-nav {
+    grid-column: 1;
+    grid-row: 1;
   }
 
-  footer .footer .footer-legal { grid-area: legal; }
+  footer .footer .footer-legal {
+    grid-column: 1;
+    grid-row: 2;
+  }
 
   footer .footer .footer-ae {
-    grid-area: ae;
+    grid-column: 1 / -1;
+    grid-row: 3;
     max-width: 560px;
+  }
+
+  footer .footer .footer-logos {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+  }
+
+  /* each logo paragraph is full-width; right-align its logo so both the MSD and
+     Assistive Technology logos share the same right edge */
+  footer .footer .footer-logos p {
+    width: 100%;
+    margin: 0;
+    text-align: right;
   }
 }
