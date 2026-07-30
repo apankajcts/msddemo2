@@ -47,9 +47,12 @@
 }
 
 .hero-banner h1 {
+  align-self: flex-start;
+  width: fit-content;
   margin: 0;
   padding: 10px;
   color: var(--background-color);
+  background-color: var(--brand-teal);
   font-family: var(--heading-font-family);
   font-size: 13px;
   font-weight: 400;
