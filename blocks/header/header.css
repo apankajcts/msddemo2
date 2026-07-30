@@ -5,6 +5,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 20;
   position: relative;
+  border-bottom: 1px solid #cfd2d7;
 }
 
 /* nav uses CSS grid: utility bar (tools) on top, primary bar (brand + toggle),
