@@ -17,7 +17,7 @@ header nav {
     'brand toggle'
     'sections sections';
   grid-template-columns: 1fr auto;
-  width: min(100% - 48px, var(--content-max-width));
+  width: 100%;
   margin: 0 auto;
   font-family: var(--body-font-family, 'invention-latin', arial, sans-serif);
 }
@@ -36,26 +36,10 @@ header nav ul {
 }
 
 /* ---- Utility bar (nav-tools) ---- */
-
-/* grey background full-bleeds to the viewport edges while the links stay
-   aligned to the centered content container */
 header nav .nav-tools {
   grid-area: tools;
-  position: relative;
   background-color: #f7f7f7;
   border-bottom: 1px solid #e5e5e5;
-}
-
-header nav .nav-tools::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #e5e5e5;
-  z-index: -1;
 }
 
 header nav .nav-tools ul {
@@ -65,7 +49,7 @@ header nav .nav-tools ul {
   gap: 16px;
   min-height: 36px;
   margin: 0;
-  padding: 0;
+  padding: 0 24px;
   flex-wrap: wrap;
 }
 
@@ -93,7 +77,7 @@ header nav .nav-tools a:hover { text-decoration: underline; }
 header nav .nav-brand {
   grid-area: brand;
   align-self: center;
-  padding: 20px 0;
+  padding: 20px 24px;
 }
 
 header nav .nav-brand img {
@@ -109,7 +93,7 @@ header nav .nav-menu-toggle {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0;
+  margin: 0 24px;
   padding: 10px 18px;
   background-color: #00857c;
   color: #fff;
@@ -153,7 +137,7 @@ header nav[aria-expanded='true'] .nav-sections {
 
 header nav .nav-sections ul {
   margin: 0;
-  padding: 0;
+  padding: 0 24px;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -178,16 +162,13 @@ header nav .nav-sections a[aria-current='page'] {
 /* ---- Mobile tuning (< 600px): tighter container inset so the utility links
    and MENU button do not overflow narrow viewports ---- */
 @media (width < 600px) {
-  header nav {
-    width: min(100% - 32px, var(--content-max-width));
-  }
-
   header nav .nav-tools ul {
     gap: 8px;
+    padding: 0 16px;
   }
 
   header nav .nav-brand {
-    padding: 16px 0;
+    padding: 16px;
   }
 
   header nav .nav-brand img {
@@ -195,6 +176,11 @@ header nav .nav-sections a[aria-current='page'] {
   }
 
   header nav .nav-menu-toggle {
+    margin: 0 16px;
     padding: 9px 14px;
+  }
+
+  header nav .nav-sections ul {
+    padding: 0 16px;
   }
 }

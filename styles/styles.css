@@ -325,7 +325,7 @@ main > .section {
 }
 
 main > .section > div {
-  width: min(100% - 48px, var(--content-max-width));
+  width: 100%;
   margin-inline: auto;
 }
 
@@ -364,8 +364,8 @@ main .section.dark {
     grid-template-columns: 1fr 1fr;
     column-gap: 48px;
     align-items: start;
-    width: min(100% - 48px, var(--content-max-width));
     margin: 40px auto;
+    padding: 0 24px;
   }
 
   main .section.form-contact-container.hero-banner-container > div {
