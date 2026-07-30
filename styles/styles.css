@@ -362,8 +362,8 @@ main .section.dark {
   main .section.form-contact-container.hero-banner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 48px;
-    align-items: start;
+    column-gap: 0;
+    align-items: stretch;
     margin: 40px auto;
     padding: 0 24px;
   }
@@ -377,14 +377,35 @@ main .section.dark {
     grid-column: 1 / -1;
   }
 
+  /* form + image sit in a light-grey band (matches source rgb(247,247,247));
+     each cell carries the grey so the 20px gutter between them is grey too */
   main .section.form-contact-container.hero-banner-container > .form-contact-wrapper {
     grid-column: 1;
     grid-row: 2;
+    padding: 40px 10px 40px 24px;
+    background-color: var(--light-color);
   }
 
   main .section.form-contact-container.hero-banner-container > .hero-banner-wrapper {
     grid-column: 2;
     grid-row: 2;
-    align-self: center;
+    padding: 40px 24px 40px 10px;
+    background-color: var(--light-color);
+  }
+
+  /* image fills its column so its height matches the form (equal-height band) */
+  main .section.form-contact-container.hero-banner-container .hero-banner.has-image {
+    max-width: none;
+    height: 100%;
+  }
+
+  main .section.form-contact-container.hero-banner-container .hero-banner.has-image picture {
+    display: block;
+    height: 100%;
+  }
+
+  main .section.form-contact-container.hero-banner-container .hero-banner.has-image img {
+    height: 100%;
+    object-fit: cover;
   }
 }
