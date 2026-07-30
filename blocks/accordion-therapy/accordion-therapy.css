@@ -9,6 +9,23 @@
   font-family: var(--body-font-family);
 }
 
+/* Full-bleed light-grey band framing the accordion (source: #f7f7f7, 64px
+   vertical padding). The wrapper is width-constrained by the global section
+   rule, so break out to the full viewport width (higher-specificity selector to
+   win over `main > .section > div`) and re-pad the rows to the content column. */
+main .section > .accordion-therapy-wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding: 64px 0;
+  background-color: #f7f7f7;
+}
+
+main .section > .accordion-therapy-wrapper > .accordion-therapy {
+  width: min(100% - 48px, var(--content-max-width));
+  margin-inline: auto;
+}
+
 /* --- Accordion item (panel) + divider between panels --- */
 .accordion-therapy .accordion-therapy-item {
   border-bottom: 1px solid rgb(210 211 212);

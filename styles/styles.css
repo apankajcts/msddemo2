@@ -345,11 +345,11 @@ main .default-content-wrapper > p {
   line-height: 1.56;
 }
 
-/* HCP resources: intro line sits 28px below the hero banner and 92px above the
-   accordion (matches the source spacing). */
+/* HCP resources: intro line sits 28px below the hero banner and 28px above the
+   accordion's grey band (matches the source spacing). */
 main .section.hero-banner-container .hero-banner-wrapper + .default-content-wrapper {
   margin-top: 28px;
-  margin-bottom: 92px;
+  margin-bottom: 28px;
 }
 
 /* section metadata */
