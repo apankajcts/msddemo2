@@ -19,7 +19,7 @@
   padding: 0;
   overflow: hidden;
   background-color: var(--brand-teal);
-  background-image: url("https://www.msdconnect.co.uk/wp-content/uploads/sites/53/2023/10/msdc-banner-image-overlay.png?w=1020&quality=80&lossy=1");
+  background-image: url("/images/msdc-banner-image-overlay.png");
   background-position: 0% 0%;
   background-size: cover;
   background-repeat: no-repeat;
